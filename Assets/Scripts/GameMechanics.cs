@@ -14,18 +14,17 @@ public class GameMechanics {
     setupXYSpheres ();
   }
 
-  private static GameObject setupSphereData (GameObject sphere, int xIndex, int yIndex) {
+  private static void setupSphereData (GameObject sphere, int xIndex, int yIndex) {
     sphere.transform.parent = GameState.field.transform;
     ObjectData objectData = sphere.AddComponent (typeof (ObjectData)) as ObjectData;
     objectData.xIndex = xIndex;
     objectData.yIndex = yIndex;
-    return sphere;
+    GameState.sphereGameObjects[xIndex, yIndex] = sphere;
   }
 
   private static void setupInitialSphere () {
     GameObject thisSphere = GameObject.Instantiate (GameState.spherePrefab);
-    GameObject thisSetupSphere = setupSphereData (thisSphere, 0, 0);
-    GameState.sphereGameObjects[0, 0] = thisSetupSphere;
+    setupSphereData (thisSphere, 0, 0);
   }
 
   private static void setupXAxisSpheres () {
@@ -41,8 +40,7 @@ public class GameMechanics {
         lastSpherePos.z);
 
       GameObject thisSphere = GameObject.Instantiate (GameState.spherePrefab, nextPos, Quaternion.identity);
-      GameObject thisSetupSphere = setupSphereData (thisSphere, x, y);
-      GameState.sphereGameObjects[x, y] = thisSetupSphere;
+      setupSphereData (thisSphere, x, y);
     }
   }
 
@@ -59,8 +57,7 @@ public class GameMechanics {
         lastSpherePos.z);
 
       GameObject thisSphere = GameObject.Instantiate (GameState.spherePrefab, nextPos, Quaternion.identity);
-      GameObject thisSetupSphere = setupSphereData (thisSphere, x, y);
-      GameState.sphereGameObjects[x, y] = thisSetupSphere;
+      setupSphereData (thisSphere, x, y);
     }
   }
 
@@ -79,8 +76,7 @@ public class GameMechanics {
           lastXSpherePos.z);
 
         GameObject thisSphere = GameObject.Instantiate (GameState.spherePrefab, nextPos, Quaternion.identity);
-        GameObject thisSetupSphere = setupSphereData (thisSphere, x, y);
-        GameState.sphereGameObjects[x, y] = thisSetupSphere;
+        setupSphereData (thisSphere, x, y);
       }
     }
   }
