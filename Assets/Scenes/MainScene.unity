@@ -254,6 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSize: 5
+  spherePrefab: {fileID: 1675870630375756, guid: 3b0b41cff7ad84fd4a20a79f0dc48767,
+    type: 2}
 --- !u!4 &1345375889
 Transform:
   m_ObjectHideFlags: 0
