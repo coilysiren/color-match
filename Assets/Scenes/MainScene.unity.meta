@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Assets/Scenes/SampleScene.unity.meta
 fileFormatVersion: 2
 guid: 2cda990e2423bbf4892e6590ba056729
 DefaultImporter:
@@ -6,12 +5,3 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-=======
-fileFormatVersion: 2
-guid: 5725ebabc20a741b580afc4cbc1ee90d
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>> ab023b9e4734704744f79c07f8c3ad9a81de5fcd:Assets/Scenes/MainScene.unity.meta
