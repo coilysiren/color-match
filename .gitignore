@@ -1,3 +1,9 @@
+*.exe
+*.dll
+
+Mono/
+*Data/
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
